@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DatePicker</title>
+	<link rel="stylesheet" type="text/css" href="datePicker.css">
+	<style type="text/css">
+		/*不是组件的样式*/
+		.datepicker{
+			width:240px;
+			height:24px;
+			line-height: 24px;
+			padding:5px;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			font-size:14px;
+			letter-spacing: 2px;
+			border:1px solid #ccc;
+			border-radius: 4px;
+			position: absolute;
+			top:10px;
+			left:calc(50% - 125px);
+			transition:.3s;
+		}
+		.datepicker:focus{
+			outline: 0 none;
+			border:1px solid #1abc9c;
+			box-shadow: 0 0 8px 2px #1abc9c;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" class="datepicker" autofocus="autofocus">
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		datepicker.init('.datepicker');
+	</script>
+</body>
+</html>
