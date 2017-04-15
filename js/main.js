@@ -27,6 +27,7 @@
 					</tr>\
 				</thead>\
 				<tbody>';
+		// 渲染td
 		for(var i = 0;i < monthData.days.length;i++){
 			var date = monthData.days[i];
 			if(i % 7 === 0){
@@ -77,7 +78,7 @@
 
 		var $input = document.querySelector(input);
 		var isOpen = false;
-
+		// 为输入框添加句柄
 		$input.addEventListener('click',function(){
 			if(isOpen){
 				//之前没有用过这个添加样式的API，用的是replace;
@@ -98,6 +99,7 @@
 		//前后按钮切换功能，如果使用选取按钮来绑定事件，那么这次绑定只能绑定一次，因为DOM是每次切换都需要被渲染的，所以有两种方式来解决这个问题
 		//1、每次渲染后绑定
 		//2、在包裹元素上绑定事件。
+		//采用第二种方式
 		$wapper.addEventListener('click',function(e){
 			var $target = e.target;//返回被点击的元素节点
 			if(!$target.classList.contains('ui-datepicker-btn')){
@@ -115,7 +117,8 @@
 			var $target = e.target;
 			if($target.tagName.toLowerCase() !== 'td') return;
 			var date = new Date(monthData.year,monthData.month - 1,$target.dataset.date);
-			$input.value = format(date);
+			$input.value = format(date);//格式化数据
+			// 选定后取消组件显示；
 			$wapper.classList.remove('ui-datepicker-wapper-show');
 				isOpen = false;
 		},false);

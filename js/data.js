@@ -41,14 +41,14 @@
 			if(thisMonth === 13) thisMonth = 1;
 
 			ret.push({
-				month:thisMonth,
-				date:date,
-				showDate:showDate
+				month:thisMonth,//当前月份
+				date:date,//是每一个日期的标志
+				showDate:showDate//显示的日期
 			});
 		}
 		return {
-			year:year,
-			month:month,
+			year:year,//返回需要显示的年份
+			month:month,//返回需要显示的月份
 			days:ret
 		};
 	}
