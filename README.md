@@ -17,6 +17,7 @@
 <br>
 2.在脚本里引入两个模块，并初始化datepicker
 #### 代码演示
+<br>
 `<script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript">
