@@ -12,16 +12,19 @@
 
 ### 使用
 1.在需要加载的控件上添加类名‘datapicker’
-#### 代码演示
-`<input type="text" class="datepicker" autofocus="autofocus">`
-<br>
+  #### 代码演示
+  
+  `<input type="text" class="datepicker" autofocus="autofocus">`
+  
 2.在脚本里引入两个模块，并初始化datepicker
-#### 代码演示
-<br>
-`<script type="text/javascript" src="js/data.js"></script>
+  #### 代码演示
+  
+  ```javascript
+<script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript">
 datepicker.init('.datepicker');
-</script>`
+</script>
+  ```
 
 
